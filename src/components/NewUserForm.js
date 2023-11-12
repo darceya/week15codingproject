@@ -35,7 +35,7 @@ export default class NewUserForm extends React.Component {
         } = this.props;
 
         return (
-            <div className="App">
+            <div className="newUserForm">
                 <form>
                     <h3>New User Form</h3>
                     <label>First Name</label>
@@ -46,7 +46,7 @@ export default class NewUserForm extends React.Component {
                     <input onChange={(e) => setNewUserFavoritePlant(e.target.value)}></input>
                     <label>Membership Type</label>
                     <input onChange={(e) => setNewUserMembershipType(e.target.value)}></input>
-                    <button onClick={(e) => this.postNewUser(e)}>Submit</button>
+                    <button class="btn btn-success" onClick={(e) => this.postNewUser(e)}>Submit</button>
                 </form>
             </div>
         )

@@ -1,6 +1,38 @@
+body {
+    background-color: lightgray;
+    margin: 1rem;
+    color: black;
+    font-family: sans-serif;
+    font-size: 20px;;
+  }
+
 .userContainer {
     display: flex;
+    justify-content: space-around;
     margin-top: 2em;
+    border: 1px solid green;
+    padding: 3px;
+}
+
+.newUserForm {
+    display: flex;
+    margin-top: 2em;
+    border: 5px solid green;
+    padding: 5px;
+}
+
+.updateForm {
+    display: flex;
+    flex-direction: column;
     border: 1px solid black;
     padding: 5px;
 }
+
+
+/* .userContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    border: 1px solid black;
+    padding: 5px;
+  } */

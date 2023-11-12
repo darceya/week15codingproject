@@ -99,26 +99,27 @@ function updateUser(e, userObject) {
 
       {/*  */}
       {users.map((user, index) => (
-        <div className="userContainer" key={index}>
-          <div>
+        <div key={index}>
+          <div className="userContainer">
             First Name: {user.firstName}
             Last Name: {user.lastName}
             Favorite Plant: {user.favoritePlant}
             Membership Type: {user.membershipType}
-            <button onClick={() => deleteUser(user.id)}>Delete</button>
+            <button class="btn btn-danger" onClick={() => deleteUser(user.id)}>Delete</button>
           </div>
+          <div className="updateForm">
           <form>
-            <h3>Update this User</h3>
-            <label>Update First Name</label>
-            <input onChange={(e) => setUpdatedFirstName(e.target.value)}></input><br></br>
-            <label>Update Last Name</label>
-            <input onChange={(e) => setUpdatedLastName(e.target.value)}></input><br></br>
-            <label>Update Favorite Plant</label>
-            <input onChange={(e) => setUpdatedFavoritePlant(e.target.value)}></input><br></br>
-            <label>Update Membership Type</label>
-            <input onChange={(e) => setUpdatedMembershipType(e.target.value)}></input><br></br>
-            <button onClick={(e) => updateUser(e, user)}>Update</button>
-      </form>
+            <label></label>
+            <input placeholder="Update First Name" onChange={(e) => setUpdatedFirstName(e.target.value)}></input><br></br>
+            <label></label>
+            <input placeholder="Update Last Name" onChange={(e) => setUpdatedLastName(e.target.value)}></input><br></br>
+            <label></label>
+            <input placeholder="Update Favorite Plant" onChange={(e) => setUpdatedFavoritePlant(e.target.value)}></input><br></br>
+            <label></label>
+            <input placeholder="Update Membership" onChange={(e) => setUpdatedMembershipType(e.target.value)}></input><br></br>
+            <button class="btn btn-primary" onClick={(e) => updateUser(e, user)}>Update</button>
+          </form>
+          </div>
         </div>
       ))}
     </div>
